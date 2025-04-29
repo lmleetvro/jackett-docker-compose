@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    environment:
+      - TZ=Etc/UTC
+      - AUTO_UPDATE=true
+    volumes:
+      - jackett_data:/config
+volumes:
+  jackett_data:
